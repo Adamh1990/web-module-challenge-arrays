@@ -66,9 +66,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(arr) {
         if (arr.length === 31) {
-            return "true";
+            return true;
         } else {
-    } return "false";
+    } return false;
  }
  console.log(is31Flavors(originalFlavors));
 
@@ -87,11 +87,10 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(str, arr){
-    let plusOne = arr;
-      plusOne.unshift(str);
-      return plusOne;
-     }
- console.log(addFlavor("Rainbow Sherbert", originalFlavors));
+    arr.unshift(str)
+     return arr;
+}
+console.log(addFlavor("Rainbow Sherbert", originalFlavors));
 
 
 
@@ -145,10 +144,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(arr, flavor){
-    return arr.splice[flavor];
-}
-console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
+function removeFlavorByName(arr, str){
+    let index = arr.indexOf(str);
+     if (index > -1) {
+       arr.splice(index, 1);
+     }
+       return arr;
+   }
+   console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
