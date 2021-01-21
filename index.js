@@ -86,11 +86,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(str, arr){
+function addFlavor(arr, str){
     arr.unshift(str)
      return arr;
 }
-console.log(addFlavor("Rainbow Sherbert", originalFlavors));
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 
